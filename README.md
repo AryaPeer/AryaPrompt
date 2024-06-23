@@ -1,2 +1,1 @@
-# AryaPrompt
-Terminal style personal website.
+My Portfolio Website Based On Cveinnt's Live Terminal
