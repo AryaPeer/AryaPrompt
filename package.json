@@ -1,11 +1,11 @@
 {
-  "name": "aryaprompt",
-  "version": "0.1.0",
+  "name": "AryaPrompt",
+  "version": "0.1.1",
   "license": "MIT",
   "author": {
     "name": "Arya Peer",
-    "url": "https://cveinnt.com",
-    "email": "apeer@Uwaterloo.ca"
+    "url": "https://aryaprompt.vercel.app/",
+    "email": "apeer@uwaterloo.ca"
   },
   "scripts": {
     "dev": "next dev",

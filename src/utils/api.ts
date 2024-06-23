@@ -23,8 +23,8 @@ export const getWeather = async (city: string) => {
 };
 
 export const getQuote = async () => {
-  const quote = "When the student is ready, the teacher appears.";
-  const author = "Manly P. Hall";
+  const quote = "Technology is not only an extension of human power but also a manifestation of the inner essence of man.";
+  const author = "Ernst Jünger";
   return {
     quote: `“${quote}” — ${author}`,
   };
