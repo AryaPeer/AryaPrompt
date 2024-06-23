@@ -5,7 +5,12 @@ export const getProjects = async () => {
   const { data } = await axios.get(
     `https://api.github.com/users/${config.social.github}/repos`,
   );
-  return data;
+
+  const reposToDisplay = ['AryaPrompt', 'ROSBOT', 'ChessAI', 'DF_DS_LIB'];
+
+  const filteredData = data.filter(repo => reposToDisplay.includes(repo.name));
+
+  return filteredData;
 };
 
 export const getReadme = async () => {
