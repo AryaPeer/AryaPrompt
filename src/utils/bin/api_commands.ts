@@ -7,12 +7,17 @@ import { getWeather } from '../api';
 
 export const projects = async (args: string[]): Promise<string> => {
   const projects = await getProjects();
-  return projects
-    .map(
-      (repo) =>
-        `${repo.name} - <a class="text-light-blue dark:text-dark-blue underline" href="${repo.html_url}" target="_blank">${repo.html_url}</a>`,
-    )
-    .join('\n');
+  
+  if (projects.length === 0) {
+    return "No pinned repositories found.";
+  }
+
+  const repositoryList = projects.map(
+    (repo) =>
+      `${repo.name} - <a class="text-light-blue dark:text-dark-blue underline" href="${repo.html_url}" target="_blank">${repo.html_url}</a>`
+  ).join('<br>'); 
+
+  return `Here are my favourite personal projects:<br>${repositoryList}`;
 };
 
 export const quote = async (args: string[]): Promise<string> => {
