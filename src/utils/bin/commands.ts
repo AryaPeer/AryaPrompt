@@ -22,9 +22,15 @@ Type 'sumfetch' to display summary.
 `;
 };
 
+const openSiteWithDelay = (url: string) => {
+  setTimeout(() => {
+    window.open(url);
+  }, 100);
+};
+
 // Redirection
 export const repo = async (args: string[]): Promise<string> => {
-  window.open(`${config.repo}`);
+  openSiteWithDelay(`${config.repo}`);
   return 'Opening Github repository...';
 };
 
@@ -39,24 +45,24 @@ More about me:
 };
 
 export const resume = async (args: string[]): Promise<string> => {
-  window.open(`${config.resume_url}`);
+  openSiteWithDelay(`${config.resume_url}`);
   return 'Opening resume...';
 };
 
 // Contact
 export const email = async (args: string[]): Promise<string> => {
-  window.open(`mailto:${config.email}`);
+  openSiteWithDelay(`mailto:${config.email}`);
   return `Opening mailto:${config.email}...`;
 };
 
 export const github = async (args: string[]): Promise<string> => {
-  window.open(`https://github.com/${config.social.github}/`);
+  openSiteWithDelay(`https://github.com/${config.social.github}/`);
 
   return 'Opening github...';
 };
 
 export const linkedin = async (args: string[]): Promise<string> => {
-  window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
+  openSiteWithDelay(`https://www.linkedin.com/in/${config.social.linkedin}/`);
 
   return 'Opening linkedin...';
 };
