@@ -40,8 +40,7 @@ export const about = async (args: string[]): Promise<string> => {
 Welcome to my website!
 More about me:
 'sumfetch' - short summary.
-'resume' - my latest resume.
-'readme' - my github readme.`;
+'resume' - my latest resume.`;
 };
 
 export const resume = async (args: string[]): Promise<string> => {
@@ -67,9 +66,6 @@ export const linkedin = async (args: string[]): Promise<string> => {
   return 'Opening linkedin...';
 };
 
-// Search
-
-// Typical linux commands
 export const echo = async (args: string[]): Promise<string> => {
   return args.join(' ');
 };
@@ -78,26 +74,8 @@ export const whoami = async (args: string[]): Promise<string> => {
   return `${config.ps1_username}`;
 };
 
-export const ls = async (args: string[]): Promise<string> => {
-  return `to
-be
-implemented`;
-};
-
 export const date = async (args: string[]): Promise<string> => {
   return new Date().toString();
-};
-
-export const vim = async (args: string[]): Promise<string> => {
-  return `'vim' is so outdated. how about 'nvim'?`;
-};
-
-export const nvim = async (args: string[]): Promise<string> => {
-  return `'nvim'? too fancy. why not 'emacs'?`;
-};
-
-export const emacs = async (args?: string[]): Promise<string> => {
-  return `you know what? just use vscode.`;
 };
 
 // Banner
