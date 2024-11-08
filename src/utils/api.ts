@@ -6,7 +6,7 @@ export const getProjects = async () => {
     `https://api.github.com/users/${config.social.github}/repos`,
   );
 
-  const reposToDisplay = ['AryaPrompt', 'ROSBOT', 'ChessAI', 'DF_DS_LIB'];
+  const reposToDisplay = ['ROSBOT', 'LSTM-Stock-Predictor', 'Geometric3D-Library', 'DF_DS_LIB'];
 
   const filteredData = data.filter(repo => reposToDisplay.includes(repo.name));
 
