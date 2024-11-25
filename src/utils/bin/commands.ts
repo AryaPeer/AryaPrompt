@@ -18,7 +18,8 @@ export const help = async (args: string[]): Promise<string> => {
 \n${c}\n
 [tab]: trigger completion.
 [ctrl+l]/clear: clear terminal.\n
-Type 'sumfetch' to display summary.
+Type 'sumfetch' to display my profile summary.
+Type 'projects' to display a short summary of my projects + github links.
 `;
 };
 
@@ -40,7 +41,8 @@ export const about = async (args: string[]): Promise<string> => {
 Welcome to my website!
 More about me:
 'sumfetch' - short summary.
-'resume' - my latest resume.`;
+'resume' - my latest resume.
+'projects' - short summaries of my projects + github links`;
 };
 
 export const resume = async (args: string[]): Promise<string> => {

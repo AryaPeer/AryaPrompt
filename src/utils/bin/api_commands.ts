@@ -15,10 +15,10 @@ export const projects = async (args: string[]): Promise<string> => {
 
   const repositoryList = projects.map(
     (repo) => 
-      `${repo.name} - ${repo.description}`
+      `<a href="${repo.html_url}" target="_blank"><u>${repo.name}</u></a> - ${repo.description || "No description provided"}`
   ).join('<br>');
 
-  return `<br>Here are my favourite personal projects:<br>${repositoryList}<br><br>All pinned on my GitHub: <a class="text-light-blue dark:text-dark-blue underline" href="https://github.com/${config.social.github}/" target="_blank">https://github.com/${config.social.github}/</a>`;
+  return `<br>Here are my favourite personal projects:<br>${repositoryList}<br><br>All pinned on my GitHub: <a href="https://github.com/${config.social.github}/" target="_blank"><u>https://github.com/${config.social.github}/</u></a>`;
 };
 
 
