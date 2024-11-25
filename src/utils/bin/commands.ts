@@ -19,7 +19,7 @@ export const help = async (args: string[]): Promise<string> => {
 [tab]: trigger completion.
 [ctrl+l]/clear: clear terminal.\n
 Type 'sumfetch' to display my profile summary.
-Type 'projects' to display a short summary of my projects + github links.
+Type 'projects' to display a short summary of my projects & their github links.
 `;
 };
 
@@ -94,5 +94,6 @@ d88P     888 888      "Y88888 "Y888888 888        888   T88b  "Y88888P"  888    
 Type 'help' to see the list of available commands.
 Type 'sumfetch' to display summary.
 Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
+Type 'projects' to see short summaries of my projects and their github links.
 `;
 };
