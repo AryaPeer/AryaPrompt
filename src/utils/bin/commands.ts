@@ -4,6 +4,7 @@ import * as bin from './index';
 import config from '../../../config.json';
 
 // Help
+// if the number of commands is not divisible by 7 add the \n back behind ${c}
 export const help = async (args: string[]): Promise<string> => {
   const commands = Object.keys(bin).sort().join(', ');
   var c = '';
@@ -15,7 +16,7 @@ export const help = async (args: string[]): Promise<string> => {
     }
   }
   return `Welcome! Here are all the available commands:
-\n${c}\n
+\n${c}
 [tab]: trigger completion.
 [ctrl+l]/clear: clear terminal.\n
 Type 'sumfetch' to display my profile summary.
