@@ -94,7 +94,65 @@ d88P     888 888      "Y88888 "Y888888 888        888   T88b  "Y88888P"  888    
                                                                                                                                         
 Type 'help' to see the list of available commands.
 Type 'sumfetch' to display summary.
-Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
-Type 'projects' to see short summaries of my projects and their github links.
+Type 'portfolio' to see short summaries of the work that I have done.
+Type 'projects' to see short summaries of projects featured on my github.
 `;
+};
+
+export const portfolio = async (args: string[]): Promise<string> => {
+  const projectList = [
+    {
+      name: 'Autonomous Drone Swarm Simulation - WOLF',
+      description: 'Engineered a sophisticated digital twin system for modeling and training autonomous drone swarms using NVIDIA Isaac Sim and reinforcement learning frameworks. Developed reinforcement learning algorithms (PPO, TD3, DQN) to enhance drone coordination. Designed a chatbot using LangChain and Llama 3.1-8B for seamless user interaction and system control.'
+    },
+    {
+      name: '3D Geometry Library',
+      description: 'Designed a C++ library for 3D geometry algorithms and structures, including Convex Hull, Delaunay Triangulation, and KD-Trees. CUDA-accelerated computations optimize performance, and OpenGL visualizations render geometric operations in real time.'
+    },
+    {
+      name: 'Bearing Milling Project - Schaeffler',
+      description: 'Revamped company documentation and milling processes for precision manufacturing. Used center of gravity and moment of inertia concepts to recalibrate calculations, improving accuracy and reducing errors by 32%. Created procedural guides and automation scripts for enhanced reliability.'
+    },
+    {
+      name: 'ROSBOT',
+      description: 'Developed a ROS2-based robot with real-time obstacle detection and navigation. Integrated SLAM Toolbox for mapping and localization. Built a React-based UI for remote control, enabling seamless interaction and improved flexibility.'
+    },
+    {
+      name: 'LSTM-Based Stock Prediction',
+      description: 'Built a Python application with a PyQt GUI for stock search and 60-day future predictions using an LSTM-based deep learning model. Integrated yfinance data and technical indicators like RSI and MACD for feature engineering. Tuned hyperparameters, scaled data using MinMaxScaler, and implemented early stopping to optimize prediction accuracy.'
+    }
+  ];
+
+  let output = 'Here is my portfolio:\n\n';
+
+  const columnWidths = { name: 40, description: 80 };
+
+  output += `| ${'Project Name'.padEnd(columnWidths.name)} | ${'Description'.padEnd(columnWidths.description)} |\n`;
+  output += `|${'-'.repeat(columnWidths.name + 2)}|${'-'.repeat(columnWidths.description + 2)}|\n`;
+
+  projectList.forEach((project) => {
+    let descLines = [];
+    let words = project.description.split(' ');
+    let currentLine = '';
+
+    words.forEach(word => {
+      if ((currentLine + word).length > columnWidths.description) {
+        descLines.push(currentLine.trim());
+        currentLine = word + ' ';
+      } else {
+        currentLine += word + ' ';
+      }
+    });
+    if (currentLine.trim().length > 0) descLines.push(currentLine.trim());
+
+    output += `| ${project.name.padEnd(columnWidths.name)} | ${descLines[0].padEnd(columnWidths.description)} |\n`;
+
+    for (let i = 1; i < descLines.length; i++) {
+      output += `| ${' '.repeat(columnWidths.name)} | ${descLines[i].padEnd(columnWidths.description)} |\n`;
+    }
+
+    output += `|${'-'.repeat(columnWidths.name + 2)}|${'-'.repeat(columnWidths.description + 2)}|\n`;
+  });
+
+  return output;
 };
