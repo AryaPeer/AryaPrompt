@@ -101,9 +101,9 @@ Type 'portfolio' to see short summaries of the work that I have done.
 export const portfolio = async (args: string[]): Promise<string> => {
   const projectList = [
     {
-      name: 'Autonomous Drone Swarm Simulation - WOLF',
+      name: 'Autonomous Drone Swarm Simulation @ WOLF',
       ascii: [
-        "Autonomous Drone Swarm Simulation - WOLF",
+        "Autonomous Drone Swarm Simulation @ WOLF",
         "  __      _   ",
         "o'')}____//   ",
         " `_/      )   ",
@@ -125,9 +125,9 @@ export const portfolio = async (args: string[]): Promise<string> => {
       description: 'Created a modular C++ library for essential 3D geometry operations, including Convex Hull, Delaunay Triangulation, and KD-Tree construction.  I am also using this library to teach myself CUDA and OpenGL, making the toolkit both a practical utility and an educational sandbox for myself so that I can learning more about graphics and GPU computing.'
     },
     {
-      name: 'Bearing Milling Project - Schaeffler',
+      name: 'Bearing Milling Project @ Schaeffler',
       ascii: [
-        "Bearing Milling Project - Schaeffler",
+        "Bearing Milling Project @ Schaeffler",
         "  //*  *\\\\  ",
         "  *      * ",
         "  *      * ",
@@ -162,7 +162,7 @@ export const portfolio = async (args: string[]): Promise<string> => {
 
   const columnWidths = { name: 40, description: 80 };
 
-  output += `| ${'Project Name & ASCII'.padEnd(columnWidths.name)} | ${'Description'.padEnd(columnWidths.description)} |\n`;
+  output += `| ${'Project Name'.padEnd(columnWidths.name)} | ${'Description'.padEnd(columnWidths.description)} |\n`;
   output += `|${'-'.repeat(columnWidths.name + 2)}|${'-'.repeat(columnWidths.description + 2)}|\n`;
 
   projectList.forEach((project) => {
