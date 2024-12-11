@@ -109,7 +109,7 @@ export const portfolio = async (args: string[]): Promise<string> => {
         " `_/      )   ",
         " (_(_/-(_/    "
       ],
-      description: 'Developed an autonomous simulation environment to demonstrate possibilities of how swarms of rovers could coordinate and navigate through diverse terrains. Leveraged NVIDIA Isaac Sim and reinforcement learning (PPO, TD3, DQN) to evolve robust swarm behaviors. Implemented a LangChain + Llama 3.1-8B chatbot interface for intuitive scenario setup and real-time interaction.'
+      description: 'Developed an autonomous simulation environment to explore how rover swarms can coordinate and navigate through diverse terrains. Leveraged NVIDIA Isaac Sim and reinforcement learning (PPO, TD3, DQN) to shape robust swarm behaviors. Also implemented a LangChain + Llama 3.1-8B chatbot interface for intuitive scenario setup and real-time interaction.'
     },
     {
       name: '3D Geometry Library',
@@ -122,7 +122,7 @@ export const portfolio = async (args: string[]): Promise<string> => {
         " |    |/       ",
         " +----+        "
       ],
-      description: 'Created a modular C++ library for essential 3D geometry operations, including Convex Hull, Delaunay Triangulation, and KD-Tree construction.  I am also using this library to teach myself CUDA and OpenGL, making the toolkit both a practical utility and an educational sandbox for myself so that I can learning more about graphics and GPU computing.'
+      description: 'Created a modular C++ library offering essential 3D geometry operations—like Convex Hull, Delaunay Triangulation, and KD-Tree construction. I’m also using this library to teach myself CUDA and OpenGL, making it both a practical toolkit and a personal learning sandbox to deepen my understanding of graphics and GPU computing.'
     },
     {
       name: 'Bearing Milling Project @ Schaeffler',
@@ -133,7 +133,7 @@ export const portfolio = async (args: string[]): Promise<string> => {
         "  *      * ",
         "  \\\\*  *//    "
       ],
-      description: 'At Schaeffler, refined the computation methods behind bearing milling processes to accurately account for shifts in center of gravity and inertia. By revising formulae and documentation, improved precision in manufacturing steps and significantly reduced calculation errors, ultimately enhancing production reliability and consistency. Wrote new python scripts that will be integrated with robotic arms to automate the milling process in the future.'
+      description: 'At Schaeffler, I refined the computation methods behind bearing milling processes to accurately factor in shifts in center of gravity and inertia. By revising formulae and documentation, I improved manufacturing precision and significantly reduced calculation errors—enhancing both reliability and consistency. I also wrote new Python scripts to integrate with robotic arms, further automating the milling process in the future.'
     },
     {
       name: 'ROSBOT',
@@ -142,7 +142,7 @@ export const portfolio = async (args: string[]): Promise<string> => {
         "",
         " :DDD "
       ],
-      description: 'Assembled a custom ROS2 robot to learn more about hardware-software integration and the ROS2 ecosystem. Employed 3D-printed components, integrated SLAM-based navigation, and implemented real-time obstacle avoidance. Created a React website that enabled intuitive remote control, providing hands-on experience with modern robotics workflows and user interface design.'
+      description: 'Assembled a custom ROS2 robot to dive deeper into hardware-software integration and the ROS2 ecosystem. I used 3D-printed components, integrated SLAM-based navigation, and implemented real-time obstacle avoidance. Additionally, I created a React-based interface for intuitive remote control, giving me hands-on experience with modern robotics workflows and UI design.'
     },
     {
       name: 'LSTM-Based Stock Prediction',
@@ -154,7 +154,7 @@ export const portfolio = async (args: string[]): Promise<string> => {
         "  |_/          ",
         "  |____________"
       ],
-      description: 'Developed an LSTM-powered stock forecasting tool inspired by Quantopian lectures. Incorporated technical indicators (RSI, MACD) and real-time data from yfinance, visualized predictions in a PyQt-based interface, and fine-tuned the model’s hyperparameters. Achieved more reliable 60-day forecasts by leveraging advanced preprocessing, scaling, and early stopping techniques. This project was really interesting as in the beginning before implementing early stopping and other methods it would simply generate an upwards or downwards line from a point on the y axis but it slowly evolved into something where it would use the current dates values as a jumping off point and show more realistic predictions.'
+      description: 'Developed an LSTM-powered stock forecasting tool inspired by Quantopian lectures. It uses technical indicators (RSI, MACD) and real-time data from yfinance, visualizing predictions through a PyQt-based interface. I fine-tuned hyperparameters and applied preprocessing, scaling, and early stopping techniques to achieve more reliable 60-day forecasts. Initially, the model produced simplistic up-or-down lines from a given point on the y-axis, but as it evolved, it began utilizing current date values as a starting point, generating more realistic and dynamic predictions.'
     }
   ];
 
