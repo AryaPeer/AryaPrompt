@@ -103,23 +103,59 @@ export const portfolio = async (args: string[]): Promise<string> => {
   const projectList = [
     {
       name: 'Autonomous Drone Swarm Simulation - WOLF',
-      description: 'Engineered a sophisticated digital twin system for modeling and training autonomous drone swarms using NVIDIA Isaac Sim and reinforcement learning frameworks. Developed reinforcement learning algorithms (PPO, TD3, DQN) to enhance drone coordination. Designed a chatbot using LangChain and Llama 3.1-8B for seamless user interaction and system control.'
+      ascii: [
+        "Autonomous Drone Swarm Simulation - WOLF",
+        "  __      _   ",
+        "o'')}____//   ",
+        " `_/      )   ",
+        " (_(_/-(_/    "
+      ],
+      description: 'Developed an autonomous simulation environment to demonstrate possibilities of how swarms of rovers could coordinate and navigate through diverse terrains. Leveraged NVIDIA Isaac Sim and reinforcement learning (PPO, TD3, DQN) to evolve robust swarm behaviors. Implemented a LangChain + Llama 3.1-8B chatbot interface for intuitive scenario setup and real-time interaction.'
     },
     {
       name: '3D Geometry Library',
-      description: 'Designed a C++ library for 3D geometry algorithms and structures, including Convex Hull, Delaunay Triangulation, and KD-Trees. CUDA-accelerated computations optimize performance, and OpenGL visualizations render geometric operations in real time.'
+      ascii: [
+        "3D Geometry Library",
+        "   +----+      ",
+        "  /    /|      ",
+        " +----+ |      ",
+        " |    | +      ",
+        " |    |/       ",
+        " +----+        "
+      ],
+      description: 'Created a modular C++ library for essential 3D geometry operations, including Convex Hull, Delaunay Triangulation, and KD-Tree construction.  I am also using this library to teach myself CUDA and OpenGL, making the toolkit both a practical utility and an educational sandbox for myself so that I can learning more about graphics and GPU computing.'
     },
     {
       name: 'Bearing Milling Project - Schaeffler',
-      description: 'Revamped company documentation and milling processes for precision manufacturing. Used center of gravity and moment of inertia concepts to recalibrate calculations, improving accuracy and reducing errors by 32%. Created procedural guides and automation scripts for enhanced reliability.'
+      ascii: [
+        "Bearing Milling Project - Schaeffler",
+        "  //*  *\\\\  ",
+        "  *      * ",
+        "  *      * ",
+        "  \\\\*  *//    "
+      ],
+      description: 'At Schaeffler, refined the computation methods behind bearing milling processes to accurately account for shifts in center of gravity and inertia. By revising formulae and documentation, improved precision in manufacturing steps and significantly reduced calculation errors, ultimately enhancing production reliability and consistency.'
     },
     {
       name: 'ROSBOT',
-      description: 'Developed a ROS2-based robot with real-time obstacle detection and navigation. Integrated SLAM Toolbox for mapping and localization. Built a React-based UI for remote control, enabling seamless interaction and improved flexibility.'
+      ascii: [
+        "ROSBOT",
+        "",
+        " :DDD "
+      ],
+      description: 'Assembled a custom ROS2 robot to learn more about hardware-software integration and the ROS2 ecosystem. Employed 3D-printed components, integrated SLAM-based navigation, and implemented real-time obstacle avoidance. Created a React website that enabled intuitive remote control, providing hands-on experience with modern robotics workflows and user interface design.'
     },
     {
       name: 'LSTM-Based Stock Prediction',
-      description: 'Built a Python application with a PyQt GUI for stock search and 60-day future predictions using an LSTM-based deep learning model. Integrated yfinance data and technical indicators like RSI and MACD for feature engineering. Tuned hyperparameters, scaled data using MinMaxScaler, and implemented early stopping to optimize prediction accuracy.'
+      ascii: [
+        "LSTM-Based Stock Prediction",
+        "  |       ____ ",
+        "  |      /     ",
+        "  |  /\\_/     ",
+        "  |_/          ",
+        "  |____________"
+      ],
+      description: 'Developed an LSTM-powered stock forecasting tool inspired by Quantopian lectures. Incorporated technical indicators (RSI, MACD) and real-time data from yfinance, visualized predictions in a PyQt-based interface, and fine-tuned the model’s hyperparameters. Achieved more reliable 60-day forecasts by leveraging advanced preprocessing, scaling, and early stopping techniques. This project was really interesting as in the beginning before implementing early stopping and other methods it would simply generate an upwards or downwards line from a point on the y axis but it slowly evolved into something where it would use the current dates values as a jumping off point and show more realistic predictions.'
     }
   ];
 
@@ -127,12 +163,13 @@ export const portfolio = async (args: string[]): Promise<string> => {
 
   const columnWidths = { name: 40, description: 80 };
 
-  output += `| ${'Project Name'.padEnd(columnWidths.name)} | ${'Description'.padEnd(columnWidths.description)} |\n`;
+  output += `| ${'Project Name & ASCII'.padEnd(columnWidths.name)} | ${'Description'.padEnd(columnWidths.description)} |\n`;
   output += `|${'-'.repeat(columnWidths.name + 2)}|${'-'.repeat(columnWidths.description + 2)}|\n`;
 
   projectList.forEach((project) => {
-    let descLines = [];
-    let words = project.description.split(' ');
+    // Split description into lines
+    const words = project.description.split(' ');
+    const descLines: string[] = [];
     let currentLine = '';
 
     words.forEach(word => {
@@ -145,10 +182,14 @@ export const portfolio = async (args: string[]): Promise<string> => {
     });
     if (currentLine.trim().length > 0) descLines.push(currentLine.trim());
 
-    output += `| ${project.name.padEnd(columnWidths.name)} | ${descLines[0].padEnd(columnWidths.description)} |\n`;
+    // Determine the maximum number of lines needed
+    const lineCount = Math.max(project.ascii.length, descLines.length);
 
-    for (let i = 1; i < descLines.length; i++) {
-      output += `| ${' '.repeat(columnWidths.name)} | ${descLines[i].padEnd(columnWidths.description)} |\n`;
+    // Print ASCII and description lines in parallel
+    for (let i = 0; i < lineCount; i++) {
+      const asciiLine = project.ascii[i] || '';
+      const descLine = descLines[i] || '';
+      output += `| ${asciiLine.padEnd(columnWidths.name)} | ${descLine.padEnd(columnWidths.description)} |\n`;
     }
 
     output += `|${'-'.repeat(columnWidths.name + 2)}|${'-'.repeat(columnWidths.description + 2)}|\n`;
