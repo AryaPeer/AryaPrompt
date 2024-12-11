@@ -95,7 +95,6 @@ d88P     888 888      "Y88888 "Y888888 888        888   T88b  "Y88888P"  888    
 Type 'help' to see the list of available commands.
 Type 'sumfetch' to display summary.
 Type 'portfolio' to see short summaries of the work that I have done.
-Type 'projects' to see short summaries of projects featured on my github.
 `;
 };
 
@@ -134,7 +133,7 @@ export const portfolio = async (args: string[]): Promise<string> => {
         "  *      * ",
         "  \\\\*  *//    "
       ],
-      description: 'At Schaeffler, refined the computation methods behind bearing milling processes to accurately account for shifts in center of gravity and inertia. By revising formulae and documentation, improved precision in manufacturing steps and significantly reduced calculation errors, ultimately enhancing production reliability and consistency.'
+      description: 'At Schaeffler, refined the computation methods behind bearing milling processes to accurately account for shifts in center of gravity and inertia. By revising formulae and documentation, improved precision in manufacturing steps and significantly reduced calculation errors, ultimately enhancing production reliability and consistency. Wrote new python scripts that will be integrated with robotic arms to automate the milling process in the future.'
     },
     {
       name: 'ROSBOT',
@@ -194,6 +193,8 @@ export const portfolio = async (args: string[]): Promise<string> => {
 
     output += `|${'-'.repeat(columnWidths.name + 2)}|${'-'.repeat(columnWidths.description + 2)}|\n`;
   });
+
+  output += "\nType 'projects' to get repository links to a few of the projects mentioned above\n";
 
   return output;
 };
