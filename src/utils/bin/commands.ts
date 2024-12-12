@@ -139,8 +139,10 @@ export const portfolio = async (args: string[]): Promise<string> => {
       name: 'ROSBOT',
       ascii: [
         "ROSBOT",
-        "",
-        " :DDD "
+        "____________________",
+        "|  _          _    |",
+        "|_/ \\________/ \\___|",
+        "  \\_/        \\_/     "
       ],
       description: 'Assembled a custom ROS2 robot to dive deeper into hardware-software integration and the ROS2 ecosystem. I used 3D-printed components, integrated SLAM-based navigation, and implemented real-time obstacle avoidance. Additionally, I created a React-based interface for intuitive remote control, giving me hands-on experience with modern robotics workflows and UI design.'
     },
