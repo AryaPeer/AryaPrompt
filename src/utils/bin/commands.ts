@@ -109,20 +109,20 @@ export const portfolio = async (args: string[]): Promise<string> => {
         " `_/      )   ",
         " (_(_/-(_/    "
       ],
-      description: 'Developed an autonomous simulation environment to explore how rover swarms can coordinate and navigate through diverse terrains. Leveraged NVIDIA Isaac Sim and reinforcement learning (PPO, TD3, DQN) to shape robust swarm behaviors. Also implemented a LangChain + Llama 3.1-8B chatbot interface for intuitive scenario setup and real-time interaction.'
+      description: 'Architected and implemented a sophisticated multi-agent simulation environment for autonomous drone swarm coordination using NVIDIA Isaac Sim. Developed behavioral algorithms utilizing reinforcement learning approaches (PPO, TD3, DQN) to enable swarm navigation across different terrains. Developed a natural language interface by integrating LangChain with a fine-tuned Llama 3.1-8B model, enabling dynamic scenario configuration and real-time system interaction. The simulation environment successfully demonstrated cooperative behaviors and adaptive navigation strategies.'
     },
     {
       name: '3D Geometry Library',
       ascii: [
         "3D Geometry Library",
-        "   +----+      ",
-        "  /    /|      ",
-        " +----+ |      ",
-        " |    | +      ",
-        " |    |/       ",
-        " +----+        "
+        "   +-------+      ",
+        "  /       /|      ",
+        " +-------+ |      ",
+        " |       | +      ",
+        " |       |/       ",
+        " +-------+        "
       ],
-      description: 'Created a modular C++ library offering essential 3D geometry operations—like Convex Hull, Delaunay Triangulation, and KD-Tree construction. I’m also using this library to teach myself CUDA and OpenGL, making it both a practical toolkit and a personal learning sandbox to deepen my understanding of graphics and GPU computing.'
+      description: 'Engineered a modular C++ library implementing fundamental 3D computational geometry algorithms, including optimized implementations of Convex Hull computation, Delaunay Triangulation, and KD-Tree construction. Currently expanding the library’s capabilities through CUDA acceleration and OpenGL visualization. This ongoing project serves as both a toolkit and a platform for exploring parallel computing and graphics programming paradigms.'
     },
     {
       name: 'Bearing Milling Project @ Schaeffler',
@@ -133,7 +133,7 @@ export const portfolio = async (args: string[]): Promise<string> => {
         "  *      * ",
         "  \\\\*  *//    "
       ],
-      description: 'At Schaeffler, I refined the computation methods behind bearing milling processes to accurately factor in shifts in center of gravity and inertia. By revising formulae and documentation, I improved manufacturing precision and significantly reduced calculation errors—enhancing both reliability and consistency. I also wrote new Python scripts to integrate with robotic arms, further automating the milling process in the future.'
+      description: 'Spearheaded the optimization of bearing milling calculations at Schaeffler, implementing algorithms to account for dynamic center of gravity and inertial variations during the milling process. Developed comprehensive models and documentation that reduced calculation errors by a significant margin, directly reducing the amount of time spent milling bearings to reduce unbalance. Architected Python-based scripts for interfacing with industrial robotic systems, establishing a foundation for future manufacturing process automation.'
     },
     {
       name: 'ROSBOT',
@@ -144,7 +144,7 @@ export const portfolio = async (args: string[]): Promise<string> => {
         "|_/ \\________/ \\___|",
         "  \\_/        \\_/     "
       ],
-      description: 'Assembled a custom ROS2 robot to dive deeper into hardware-software integration and the ROS2 ecosystem. I used 3D-printed components, integrated SLAM-based navigation, and implemented real-time obstacle avoidance. Additionally, I created a React-based interface for intuitive remote control, giving me hands-on experience with modern robotics workflows and UI design.'
+      description: 'Designed and constructed an autonomous robot using ROS2, incorporating custom 3D-printed components and SLAM-based navigation. Implemented object tracking algorithms and developed a modern React-based control interface, creating a comprehensive demonstration of full-stack robotics development.'
     },
     {
       name: 'LSTM-Based Stock Prediction',
@@ -156,7 +156,7 @@ export const portfolio = async (args: string[]): Promise<string> => {
         "  |_/          ",
         "  |____________"
       ],
-      description: 'Developed an LSTM-powered stock forecasting tool inspired by Quantopian lectures. It uses technical indicators (RSI, MACD) and real-time data from yfinance, visualizing predictions through a PyQt-based interface. I fine-tuned hyperparameters and applied preprocessing, scaling, and early stopping techniques to achieve more reliable 60-day forecasts. Initially, the model produced simplistic up-or-down lines from a given point on the y-axis, but as it evolved, it began utilizing current date values as a starting point, generating more realistic and dynamic predictions.'
+      description: 'Developed a stock prediction model using bidirectional LSTM neural networks with attention mechanisms, integrating technical indicators (RSI, MACD, EMA) and real-time market data from yfinance. The project features time-series cross-validation, early stopping, and adaptive learning rates to improve training stability. Added experimental features like volatility adjustment, mean reversion factors, and confidence intervals to explore different prediction approaches. Built a PyQt interface for visualization, displaying 60-day forecasts alongside relevant metrics like Sharpe ratios and rolling volatility.'
     }
   ];
 
