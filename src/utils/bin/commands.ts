@@ -109,7 +109,7 @@ export const portfolio = async (args: string[]): Promise<string> => {
         " `_/      )   ",
         " (_(_/-(_/    "
       ],
-      description: 'Architected and implemented a sophisticated multi-agent simulation environment for autonomous drone swarm coordination using NVIDIA Isaac Sim. Developed behavioral algorithms utilizing reinforcement learning approaches (PPO, TD3, DQN) to enable swarm navigation across different terrains. Developed a natural language interface by integrating LangChain with a fine-tuned Llama 3.1-8B model, enabling dynamic scenario configuration and real-time system interaction. The simulation environment successfully demonstrated cooperative behaviors and adaptive navigation strategies.'
+      description: 'Led development of an advanced multi-agent simulation environment using NVIDIA Isaac Sim and ROS2, implementing PPO/DQN reinforcement learning algorithms that achieved 93% success in navigation tasks. Integrated extended Kalman filters for sensor fusion of LiDAR and radar data, while implementing real-time SLAM and object detection through Nav2.'
     },
     {
       name: '3D Geometry Library',
@@ -122,29 +122,18 @@ export const portfolio = async (args: string[]): Promise<string> => {
         " |       |/       ",
         " +-------+        "
       ],
-      description: 'Engineered a modular C++ library implementing fundamental 3D computational geometry algorithms, including optimized implementations of Convex Hull computation, Delaunay Triangulation, and KD-Tree construction. Currently expanding the library’s capabilities through CUDA acceleration and OpenGL visualization. This ongoing project serves as both a toolkit and a platform for exploring parallel computing and graphics programming paradigms.'
+      description: 'Engineered a modular C++ library implementing fundamental 3D computational geometry algorithms, including implementations of Convex Hull, Delaunay Triangulation, and KD-Tree construction. Currently expanding the library’s capabilities through CUDA acceleration and OpenGL visualization. This ongoing project serves as both a toolkit and a platform for exploring parallel computing and graphics programming.'
     },
     {
-      name: 'Bearing Milling Project @ Schaeffler',
+      name: 'Ask An AI',
       ascii: [
-        "Bearing Milling Project @ Schaeffler",
-        "  //*  *\\\\  ",
-        "  *      * ",
-        "  *      * ",
-        "  \\\\*  *//    "
+        "    .--.",
+        "   |o_o |",
+        "   |:_/ |",
+        "  //   \\ \\",
+        " (|     | )"
       ],
-      description: 'Spearheaded the optimization of bearing milling calculations at Schaeffler, implementing algorithms to account for dynamic center of gravity and inertial variations during the milling process. Developed comprehensive models and documentation that reduced calculation errors by a significant margin, directly reducing the amount of time spent milling bearings to reduce unbalance. Architected Python-based scripts for interfacing with industrial robotic systems, establishing a foundation for future manufacturing process automation.'
-    },
-    {
-      name: 'ROSBOT',
-      ascii: [
-        "ROSBOT",
-        "____________________",
-        "|  _          _    |",
-        "|_/ \\________/ \\___|",
-        "  \\_/        \\_/     "
-      ],
-      description: 'Designed and constructed an autonomous robot using ROS2, incorporating custom 3D-printed components and SLAM-based navigation. Implemented object tracking algorithms and developed a modern React-based control interface, creating a comprehensive demonstration of full-stack robotics development.'
+      description: 'Engineered an innovative audio-based Q&A application featuring real-time multi-speaker voice identification and advanced audio processing. Implemented sophisticated speech-to-text conversion using Facebook Demucs and OpenAI Whisper, enhanced by spectral clustering for speaker diarization. Applied DSP techniques including spectral subtraction and bandpass filtering for superior noise reduction.'
     },
     {
       name: 'LSTM-Based Stock Prediction',
@@ -156,7 +145,18 @@ export const portfolio = async (args: string[]): Promise<string> => {
         "  |_/          ",
         "  |____________"
       ],
-      description: 'Developed a stock prediction model using bidirectional LSTM neural networks with attention mechanisms, integrating technical indicators (RSI, MACD, EMA) and real-time market data from yfinance. The project features time-series cross-validation, early stopping, and adaptive learning rates to improve training stability. Added experimental features like volatility adjustment, mean reversion factors, and confidence intervals to explore different prediction approaches. Built a PyQt interface for visualization, displaying 60-day forecasts alongside relevant metrics like Sharpe ratios and rolling volatility.'
+      description: 'Developed a sophisticated financial forecasting platform utilizing bidirectional LSTM networks with attention mechanisms for 30-day market predictions. Implemented advanced features including time-series cross-validation, adaptive learning rates, and MinMaxScaler data normalization. Created a comprehensive trading strategy simulation system using Backtrader, incorporating technical indicators and real-time market data.'
+    },
+    {
+      name: 'Bearing Milling Project @ Schaeffler',
+      ascii: [
+        "Bearing Milling Project @ Schaeffler",
+        "  //*  *\\\\  ",
+        "  *      * ",
+        "  *      * ",
+        "  \\\\*  *//    "
+      ],
+      description: 'Spearheaded the optimization of bearing milling calculations at Schaeffler, implementing algorithms to account for dynamic center of gravity and inertial variations during the milling process. Developed comprehensive models and documentation that reduced calculation errors by a significant margin, directly reducing the amount of time spent milling bearings to reduce unbalance. Architected Python-based scripts for interfacing with industrial robotic systems, establishing a foundation for future manufacturing process automation.'
     }
   ];
 
