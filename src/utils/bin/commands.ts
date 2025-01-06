@@ -101,15 +101,15 @@ Type 'portfolio' to see short summaries of the work that I have done.
 export const portfolio = async (args: string[]): Promise<string> => {
   const projectList = [
     {
-      name: 'Autonomous Drone Swarm Simulation @ WOLF',
+      name: 'Autonomous Drone Simulations @ WOLF',
       ascii: [
-        "Autonomous Drone Swarm Simulation @ WOLF",
+        "Autonomous Drone Simulations @ WOLF",
         "  __      _   ",
         "o'')}____//   ",
         " `_/      )   ",
         " (_(_/-(_/    "
       ],
-      description: 'Led development of an advanced multi-agent simulation environment using NVIDIA Isaac Sim and ROS2, implementing PPO/DQN reinforcement learning algorithms that achieved 93% success in navigation tasks. Integrated extended Kalman filters for sensor fusion of LiDAR and radar data, while implementing real-time SLAM and object detection through Nav2.'
+      description: 'Led development of an advanced Drone simulation environment using NVIDIA Isaac Sim and ROS2, implementing PPO/DQN reinforcement learning algorithms that achieved 93% success in navigation tasks. Integrated extended Kalman filters for sensor fusion of LiDAR and radar data, while implementing real-time SLAM and object detection through Nav2 & torchvision.'
     },
     {
       name: '3D Geometry Library',
@@ -127,6 +127,7 @@ export const portfolio = async (args: string[]): Promise<string> => {
     {
       name: 'Ask An AI',
       ascii: [
+        "Ask An AI",
         "    .--.",
         "   |o_o |",
         "   |:_/ |",
