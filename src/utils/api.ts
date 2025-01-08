@@ -28,8 +28,8 @@ export const getWeather = async (city: string) => {
 };
 
 export const getQuote = async () => {
-  const quote = "Technology is not only an extension of human power but also a manifestation of the inner essence of man.";
-  const author = "Ernst Jünger";
+  const quote = "The only thing worse than losing is never trying.";
+  const author = "Mike Ma";
   return {
     quote: `“${quote}” — ${author}`,
   };
