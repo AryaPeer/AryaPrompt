@@ -109,7 +109,7 @@ export const portfolio = async (args: string[]): Promise<string> => {
         " `_/      )   ",
         " (_(_/-(_/    "
       ],
-      description: 'Led development of an advanced Drone simulation environment using NVIDIA Isaac Sim and ROS2, implementing PPO/DQN reinforcement learning algorithms that achieved 93% success in navigation tasks. Integrated extended Kalman filters for sensor fusion of LiDAR and radar data, while implementing real-time SLAM and object detection through Nav2 & torchvision.'
+      description: 'While at Wolf, I worked (with another co-op and a Sr. Firmware Developer) on a drone simulation environment using NVIDIA Isaac Sim and ROS2, implementing PPO/DQN reinforcement learning algorithms that achieved 93% success in navigation tasks. The drones used extended Kalman filters for sensor fusion of LiDAR and radar data and were capable of operating based on real-time SLAM and object detection through Nav2 & torchvision.'
     },
     {
       name: '3D Geometry Library',
@@ -122,7 +122,7 @@ export const portfolio = async (args: string[]): Promise<string> => {
         " |       |/       ",
         " +-------+        "
       ],
-      description: 'Engineered a modular C++ library implementing fundamental 3D computational geometry algorithms, including implementations of Convex Hull, Delaunay Triangulation, and KD-Tree construction. Currently expanding the library’s capabilities through CUDA acceleration and OpenGL visualization. This ongoing project serves as both a toolkit and a platform for exploring parallel computing and graphics programming.'
+      description: 'Engineered a modular C++ library implementing fundamental 3D computational geometry algorithms, including implementations of Convex Hull, Delaunay Triangulation, and KD-Tree construction.'
     },
     {
       name: 'Ask An AI',
@@ -134,7 +134,7 @@ export const portfolio = async (args: string[]): Promise<string> => {
         "  //   \\ \\",
         " (|     | )"
       ],
-      description: 'Engineered an innovative audio-based Q&A application featuring real-time multi-speaker voice identification and advanced audio processing. Implemented sophisticated speech-to-text conversion using Facebook Demucs and OpenAI Whisper, enhanced by spectral clustering for speaker diarization. Applied DSP techniques including spectral subtraction and bandpass filtering for superior noise reduction.'
+      description: 'Audio-based Q&A application featuring real-time multi-speaker voice identification and advanced audio processing. Implemented speech-to-text conversion using OpenAI Whisper and spectral clustering for speaker diarization (seperating text based on who was speaking). Applied DSP techniques including spectral subtraction and bandpass filtering for superior noise reduction.'
     },
     {
       name: 'LSTM-Based Stock Prediction',
@@ -146,7 +146,7 @@ export const portfolio = async (args: string[]): Promise<string> => {
         "  |_/          ",
         "  |____________"
       ],
-      description: 'Developed a sophisticated financial forecasting platform utilizing bidirectional LSTM networks with attention mechanisms for 30-day market predictions. Implemented advanced features including time-series cross-validation, adaptive learning rates, and MinMaxScaler data normalization. Created a comprehensive trading strategy simulation system using Backtrader, incorporating technical indicators and real-time market data.'
+      description: 'Developed a financial forecasting tool utilizing bidirectional LSTM networks with attention mechanisms for 30-day market predictions. Implemented features including time-series cross-validation, adaptive learning rates, and MinMaxScaler data normalization.'
     },
     {
       name: 'Bearing Milling Project @ Schaeffler',
@@ -157,7 +157,7 @@ export const portfolio = async (args: string[]): Promise<string> => {
         "  *      * ",
         "  \\\\*  *//    "
       ],
-      description: 'Spearheaded the optimization of bearing milling calculations at Schaeffler, implementing algorithms to account for dynamic center of gravity and inertial variations during the milling process. Developed comprehensive models and documentation that reduced calculation errors by a significant margin, directly reducing the amount of time spent milling bearings to reduce unbalance. Architected Python-based scripts for interfacing with industrial robotic systems, establishing a foundation for future manufacturing process automation.'
+      description: 'While at Schaeffler I worked on optimizing bearing milling calculations, implementing algorithms to account for center of gravity and inertia based on the amounts to be removed during the milling process. Developed comprehensive models and documentation that reduced calculation errors by a significant margin, directly reducing the amount of time spent milling bearings to reduce unbalance. Architected Python-based scripts for interfacing with industrial robotic systems, establishing a foundation for future manufacturing process automation.'
     }
   ];
 
