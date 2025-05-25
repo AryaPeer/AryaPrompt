@@ -112,31 +112,6 @@ export const portfolio = async (args: string[]): Promise<string> => {
       description: 'While at Wolf, I worked (with another co-op and a Sr. Firmware Developer) on a drone simulation environment using NVIDIA Isaac Sim and ROS2, implementing PPO/DQN reinforcement learning algorithms that achieved 93% success in navigation tasks. The drones used extended Kalman filters for sensor fusion of LiDAR and radar data and were capable of operating based on real-time SLAM and object detection through Nav2 & torchvision.'
     },
     {
-      name: '3D Geometry Library',
-      ascii: [
-        "3D Geometry Library",
-        "   +-------+      ",
-        "  /       /|      ",
-        " +-------+ |      ",
-        " |       | +      ",
-        " |       |/       ",
-        " +-------+        "
-      ],
-      description: 'Engineered a modular C++ library implementing fundamental 3D computational geometry algorithms, including implementations of Convex Hull, Delaunay Triangulation, and KD-Tree construction.'
-    },
-    {
-      name: 'Ask An AI',
-      ascii: [
-        "Ask An AI",
-        "    .--.",
-        "   |o_o |",
-        "   |:_/ |",
-        "  //   \\ \\",
-        " (|     | )"
-      ],
-      description: 'Audio-based Q&A application featuring real-time multi-speaker voice identification and advanced audio processing. Implemented speech-to-text conversion using OpenAI Whisper and spectral clustering for speaker diarization (seperating text based on who was speaking). Applied DSP techniques including spectral subtraction and bandpass filtering for superior noise reduction.'
-    },
-    {
       name: 'LSTM-Based Stock Prediction',
       ascii: [
         "LSTM-Based Stock Prediction",
