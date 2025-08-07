@@ -20,7 +20,6 @@ export const help = async (args: string[]): Promise<string> => {
 [tab]: trigger completion.
 [ctrl+l]/clear: clear terminal.\n
 Type 'sumfetch' to display my profile summary.
-Type 'portfolio' to display short summaries of the work that I have done.
 `;
 };
 
@@ -42,8 +41,7 @@ export const about = async (args: string[]): Promise<string> => {
 Welcome to my website!
 More about me:
 'sumfetch' - short summary.
-'resume' - my latest resume.
-'portfolio' - short summaries of the work that I have done.`;
+'resume' - my latest resume.`;
 };
 
 export const resume = async (args: string[]): Promise<string> => {
@@ -94,85 +92,5 @@ d88P     888 888      "Y88888 "Y888888 888        888   T88b  "Y88888P"  888    
                                                                                                                                         
 Type 'help' to see the list of available commands.
 Type 'sumfetch' to display summary.
-Type 'portfolio' to see short summaries of the work that I have done.
 `;
-};
-
-export const portfolio = async (args: string[]): Promise<string> => {
-  const projectList = [
-    {
-      name: 'Autonomous Drone Simulations @ WOLF',
-      ascii: [
-        "Autonomous Drone Simulations @ WOLF",
-        "  __      _   ",
-        "o'')}____//   ",
-        " `_/      )   ",
-        " (_(_/-(_/    "
-      ],
-      description: 'While at Wolf, I worked (with another co-op and a Sr. Firmware Developer) on a drone simulation environment using NVIDIA Isaac Sim and ROS2, implementing PPO/DQN reinforcement learning algorithms that achieved 93% success in navigation tasks. The drones used extended Kalman filters for sensor fusion of LiDAR and radar data and were capable of operating based on real-time SLAM and object detection through Nav2 & torchvision.'
-    },
-    {
-      name: 'LSTM-Based Stock Prediction',
-      ascii: [
-        "LSTM-Based Stock Prediction",
-        "  |       ____ ",
-        "  |      /     ",
-        "  |  /\\_/     ",
-        "  |_/          ",
-        "  |____________"
-      ],
-      description: 'Developed a financial forecasting tool utilizing bidirectional LSTM networks with attention mechanisms for 30-day market predictions. Implemented features including time-series cross-validation, adaptive learning rates, and MinMaxScaler data normalization.'
-    },
-    {
-      name: 'Bearing Milling Project @ Schaeffler',
-      ascii: [
-        "Bearing Milling Project @ Schaeffler",
-        "  //*  *\\\\  ",
-        "  *      * ",
-        "  *      * ",
-        "  \\\\*  *//    "
-      ],
-      description: 'While at Schaeffler I worked on optimizing bearing milling calculations, implementing algorithms to account for center of gravity and inertia based on the amounts to be removed during the milling process. Developed comprehensive models and documentation that reduced calculation errors by a significant margin, directly reducing the amount of time spent milling bearings to reduce unbalance. Architected Python-based scripts for interfacing with industrial robotic systems, establishing a foundation for future manufacturing process automation.'
-    }
-  ];
-
-  let output = 'Here is my portfolio:\n\n';
-
-  const columnWidths = { name: 40, description: 80 };
-
-  output += `| ${'Project Name'.padEnd(columnWidths.name)} | ${'Description'.padEnd(columnWidths.description)} |\n`;
-  output += `|${'-'.repeat(columnWidths.name + 2)}|${'-'.repeat(columnWidths.description + 2)}|\n`;
-
-  projectList.forEach((project) => {
-    // Split description into lines
-    const words = project.description.split(' ');
-    const descLines: string[] = [];
-    let currentLine = '';
-
-    words.forEach(word => {
-      if ((currentLine + word).length > columnWidths.description) {
-        descLines.push(currentLine.trim());
-        currentLine = word + ' ';
-      } else {
-        currentLine += word + ' ';
-      }
-    });
-    if (currentLine.trim().length > 0) descLines.push(currentLine.trim());
-
-    // Determine the maximum number of lines needed
-    const lineCount = Math.max(project.ascii.length, descLines.length);
-
-    // Print ASCII and description lines in parallel
-    for (let i = 0; i < lineCount; i++) {
-      const asciiLine = project.ascii[i] || '';
-      const descLine = descLines[i] || '';
-      output += `| ${asciiLine.padEnd(columnWidths.name)} | ${descLine.padEnd(columnWidths.description)} |\n`;
-    }
-
-    output += `|${'-'.repeat(columnWidths.name + 2)}|${'-'.repeat(columnWidths.description + 2)}|\n`;
-  });
-
-  output += "\nType 'projects' to get repository links to a few of the projects mentioned above\n";
-
-  return output;
 };
