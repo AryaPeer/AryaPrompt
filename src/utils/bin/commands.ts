@@ -9,7 +9,7 @@ export const help = async (args: string[]): Promise<string> => {
   const commands = Object.keys(bin).sort().join(', ');
   var c = '';
   for (let i = 1; i <= Object.keys(bin).sort().length; i++) {
-    if (i % 7 === 0) {
+    if (i % 5 === 0) {
       c += Object.keys(bin).sort()[i - 1] + '\n';
     } else {
       c += Object.keys(bin).sort()[i - 1] + ' ';
@@ -20,7 +20,6 @@ export const help = async (args: string[]): Promise<string> => {
 [tab]: trigger completion.
 [ctrl+l]/clear: clear terminal.\n
 Type 'sumfetch' to display my profile summary.
-Type 'projects' to display a short summary of my projects & their github links.
 `;
 };
 
@@ -42,8 +41,7 @@ export const about = async (args: string[]): Promise<string> => {
 Welcome to my website!
 More about me:
 'sumfetch' - short summary.
-'resume' - my latest resume.
-'projects' - short summaries of my projects + github links`;
+'resume' - my latest resume.`;
 };
 
 export const resume = async (args: string[]): Promise<string> => {
@@ -94,7 +92,5 @@ d88P     888 888      "Y88888 "Y888888 888        888   T88b  "Y88888P"  888    
                                                                                                                                         
 Type 'help' to see the list of available commands.
 Type 'sumfetch' to display summary.
-Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
-Type 'projects' to see short summaries of my projects and their github links.
 `;
 };
