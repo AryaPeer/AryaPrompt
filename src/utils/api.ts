@@ -6,7 +6,7 @@ export const getProjects = async () => {
     `https://api.github.com/users/${config.social.github}/repos`,
   );
 
-  const reposToDisplay = ['LSTM-Stock-Predictor', 'DataFrameLibrary', 'CUDAVidCleaner'];
+  const reposToDisplay = ['LSTM-Stock-Predictor', 'DataFrameLibrary', 'Video-Cleaner'];
 
   const filteredData = data.filter(repo => reposToDisplay.includes(repo.name));
 
