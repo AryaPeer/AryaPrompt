@@ -40,14 +40,10 @@ export const about = async (args: string[]): Promise<string> => {
   return `Hi, I am ${config.name}. 
 Welcome to my website!
 More about me:
-'sumfetch' - short summary.
-'resume' - my latest resume.`;
+'sumfetch' - short summary.`;
 };
 
-export const resume = async (args: string[]): Promise<string> => {
-  openSiteWithDelay(`${config.resume_url}`);
-  return 'Opening resume...';
-};
+
 
 // Contact
 export const email = async (args: string[]): Promise<string> => {
