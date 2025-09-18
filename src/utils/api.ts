@@ -28,8 +28,8 @@ export const getWeather = async (city: string) => {
 };
 
 export const getQuote = async () => {
-  const { data } = await axios.get('https://thequoteshub.com/api/random-quote');
+  const { data } = await axios.get('https://thequoteshub.com/api/random-quote?format=json');
   return {
-    quote: `“${data.Quote}” — ${data.Author}`,
+    quote: `“${data.text}” — ${data.author}`,
   };
 };
