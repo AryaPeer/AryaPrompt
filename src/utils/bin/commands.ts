@@ -6,21 +6,34 @@ import config from '../../../config.json';
 // Help
 // if the number of commands is not divisible by 7 add the \n back behind ${c}
 export const help = async (args: string[]): Promise<string> => {
-  const commands = Object.keys(bin).sort().join(', ');
-  var c = '';
-  for (let i = 1; i <= Object.keys(bin).sort().length; i++) {
-    if (i % 5 === 0) {
-      c += Object.keys(bin).sort()[i - 1] + '\n';
-    } else {
-      c += Object.keys(bin).sort()[i - 1] + ' ';
-    }
-  }
-  return `Welcome! Here are all the available commands:
-\n${c}
-[tab]: trigger completion.
-[ctrl+l]/clear: clear terminal.\n
-Type 'sumfetch' to display my profile summary.
-`;
+  return `Welcome! Here are all the available commands organized by category:
+
+  <span class="text-light-yellow dark:text-dark-yellow">UTILITY COMMANDS:</span>
+    help      - Show this help message
+    sumfetch  - Display profiles summary
+    about     - Learn more about me
+    echo      - Echo back your input
+    date      - Display current date and time
+
+  <span class="text-light-yellow dark:text-dark-yellow">SOCIAL & CONTACT:</span>
+    email     - Open email client
+    github    - Visit my GitHub profile
+    linkedin  - Visit my LinkedIn profile
+    repo      - Open this website's repository
+
+  <span class="text-light-yellow dark:text-dark-yellow">PROJECT & INFO:</span>
+    projects  - View my favorite projects
+    quote     - Random Quotes
+    weather   - Check weather for a city (usage: weather [city])
+
+  <span class="text-light-yellow dark:text-dark-yellow">SYSTEM:</span>
+    clear     - Clear the terminal
+    [ctrl+l]  - Alternative way to clear terminal
+    [tab]     - Trigger command completion
+    [↑/↓]     - Navigate command history
+
+  <span class="text-light-gray dark:text-dark-gray">Type any command above to get started!</span>
+  `;
 };
 
 const openSiteWithDelay = (url: string) => {

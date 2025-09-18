@@ -28,9 +28,8 @@ export const getWeather = async (city: string) => {
 };
 
 export const getQuote = async () => {
-  const quote = "The only thing worse than losing is never trying.";
-  const author = "Mike Ma";
+  const { data } = await axios.get('https://api.quotable.io/random');
   return {
-    quote: `“${quote}” — ${author}`,
+    quote: `“${data.content}” — ${data.author}`,
   };
 };
