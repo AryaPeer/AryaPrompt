@@ -10,6 +10,12 @@ export const shell = async (
   const args = command.split(' ');
   args[0] = args[0].toLowerCase();
 
+    if (command === 'PLEASE HELP ME') {
+      setHistory('OMW DANIEL!!!');
+      setCommand('');
+      return;
+    }
+
   if (args[0] === 'clear') {
     clearHistory();
   } else if (command === '') {
