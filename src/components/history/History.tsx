@@ -14,11 +14,11 @@ export const History: React.FC<{ history: Array<HistoryInterface> }> = ({
               <Ps1 />
             </div>
 
-            <div className="flex-grow">{entry.command}</div>
+            <div className="flex-grow break-words">{entry.command}</div>
           </div>
 
-          <p
-            className="whitespace-pre-wrap mb-2"
+          <div
+            className="terminal-output mb-2"
             style={{ lineHeight: 'normal' }}
             dangerouslySetInnerHTML={{ __html: entry.output }}
           />

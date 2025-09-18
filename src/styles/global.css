@@ -21,6 +21,25 @@ div#__next > div {
   overflow: auto;
 }
 
+* {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
+
+.terminal-container {
+  overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.terminal-output {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;

@@ -22,7 +22,7 @@ const App = ({ Component, pageProps }) => {
       </Head>
 
       <div
-        className="text-light-foreground dark:text-dark-foreground min-w-max text-xs sm:text-sm md:text-base overflow-x-auto whitespace-nowrap"
+        className="text-light-foreground dark:text-dark-foreground text-xs sm:text-sm md:text-base terminal-container"
         onClick={onClickAnywhere}
       >
         <main className="bg-light-background dark:bg-dark-background w-full h-full p-2">

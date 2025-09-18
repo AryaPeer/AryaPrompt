@@ -21,10 +21,9 @@ export const projects = async (args: string[]): Promise<string> => {
   return `<br>Here are my favourite personal projects:<br>${repositoryList}<br><br>All pinned on my GitHub: <a href="https://github.com/${config.social.github}/" target="_blank"><u>https://github.com/${config.social.github}/</u></a>`;
 };
 
-
 export const quote = async (args: string[]): Promise<string> => {
   const data = await getQuote();
-  return data.quote;
+  return `<div style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%;">${data.quote}</div>`;
 };
 
 export const weather = async (args: string[]): Promise<string> => {
