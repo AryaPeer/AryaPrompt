@@ -112,16 +112,6 @@ export const portfolio = async (args: string[]): Promise<string> => {
           "- Added time-series analysis features: rolling windows, correlation matrices, quantiles, and sampling utilities.",
           "- Designed for data manipulation workflows with method chaining and intuitive indexing syntax."
         ].join('\n')
-    },
-    {
-      name: 'LSTM-Based Stock Prediction',
-      description:
-        [
-          "- Built a stock forecasting app using bidirectional LSTM networks with attention mechanisms for multi-day predictions.",
-          "- Engineered features including technical indicators, lagged variables, and rolling statistics from market data.",
-          "- Implemented time-series cross-validation, regularization techniques, and adaptive learning rates for stability.",
-          "- Developed PyQt5 GUI for interactive stock selection, real-time predictions, and forecast visualization."
-        ].join('\n')
     }
   ];
 
