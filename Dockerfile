@@ -1,10 +1,8 @@
-FROM node:18-alpine as base
+FROM node:24-alpine as base
 
 WORKDIR /home/node/app
-COPY package.json ./
-RUN npm install -g npm-check-updates
-RUN ncu -u
-RUN npm install
+COPY package.json package-lock.json ./
+RUN npm ci
 COPY . ./
 
 FROM base as production

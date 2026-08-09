@@ -1,29 +1,15 @@
-// // List of commands that require API calls
+// List of commands that require API calls
 
-import { getProjects } from '../api';
-import { getQuote } from '../api';
-import { getReadme } from '../api';
-import { getWeather } from '../api';
-import config from '../../../config.json';
-
-export const projects = async (args: string[]): Promise<string> => {
-  const projects = await getProjects();
-  
-  if (projects.length === 0) {
-    return "No pinned repositories found.";
-  }
-
-  const repositoryList = projects.map(
-    (repo) => 
-      `<a href="${repo.html_url}" target="_blank"><u>${repo.name}</u></a> - ${repo.description || "No description provided"}`
-  ).join('<br>');
-
-  return `<br>Here are my favourite personal projects:<br>${repositoryList}<br><br>All pinned on my GitHub: <a href="https://github.com/${config.social.github}/" target="_blank"><u>https://github.com/${config.social.github}/</u></a>`;
-};
+import { escapeHtml, getQuote, getWeather } from '../api';
 
 export const quote = async (args: string[]): Promise<string> => {
-  const data = await getQuote();
-  return `<div style="word-wrap: break-word; overflow-wrap: break-word; max-width: 100%;">${data.quote}</div>`;
+  const { text, author } = await getQuote();
+
+  return `<div class="quote"><span class="quote-text">&ldquo;${escapeHtml(
+    text,
+  )}&rdquo;</span><span class="quote-author">&mdash; ${escapeHtml(
+    author,
+  )}</span></div>`;
 };
 
 export const weather = async (args: string[]): Promise<string> => {

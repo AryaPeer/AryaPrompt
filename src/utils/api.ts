@@ -1,22 +1,17 @@
 import axios from 'axios';
-import config from '../../config.json';
 
-export const getProjects = async () => {
-  const { data } = await axios.get(
-    `https://api.github.com/users/${config.social.github}/repos`,
-  );
+const quoteAuthor = 'Friedrich Nietzsche';
+const maxQuoteLength = 280;
+const maxQuoteAttempts = 3;
+let quoteTotal = 0;
 
-  const reposToDisplay = ['DataFrameLibrary', 'Video-Cleaner', 'BallBalancer', 'ROSBOT'];
-
-  const filteredData = data.filter(repo => reposToDisplay.includes(repo.name));
-
-  return filteredData;
-};
-
-export const getReadme = async () => {
-  const { data } = await axios.get(config.readmeUrl);
-  return data;
-};
+export const escapeHtml = (text: string) =>
+  text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 
 export const getWeather = async (city: string) => {
   try {
@@ -27,9 +22,39 @@ export const getWeather = async (city: string) => {
   }
 };
 
+const getAuthorPage = async (page: number) => {
+  const authorId = encodeURIComponent(quoteAuthor).replace(/%20/g, '+');
+  const { data } = await axios.get(
+    `https://thequoteshub.com/api/authors/${authorId}`,
+    { params: { page, page_size: 1 } },
+  );
+  return data;
+};
+
+const getAuthorTotal = async () => {
+  if (!quoteTotal) {
+    const data = await getAuthorPage(1);
+    quoteTotal = data.pagination.total;
+  }
+  return quoteTotal;
+};
+
 export const getQuote = async () => {
-  const { data } = await axios.get('https://thequoteshub.com/api/random-quote?format=json');
+  const total = await getAuthorTotal();
+  let quote;
+
+  for (let attempt = 0; attempt < maxQuoteAttempts; attempt++) {
+    const page = Math.floor(Math.random() * total) + 1;
+    const data = await getAuthorPage(page);
+    quote = data.quotes[0];
+
+    if (quote.text.length <= maxQuoteLength) {
+      break;
+    }
+  }
+
   return {
-    quote: `“${data.text}” — ${data.author}`,
+    text: quote.text.trim(),
+    author: quote.author,
   };
 };
