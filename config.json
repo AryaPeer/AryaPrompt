@@ -1,5 +1,7 @@
 {
   "title": "AryaPROMPT",
+  "description": "Arya Peer's terminal-style personal site. Type 'help' to get started.",
+  "url": "https://www.aryapeer.com",
   "name": "Arya Peer",
   "ascii": "AryaPROMPT",
   "social": {

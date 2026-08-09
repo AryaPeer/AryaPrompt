@@ -168,7 +168,7 @@ const roles: Role[] = [
     dates: 'May 2026 – Aug 2026',
     location: 'San Francisco, CA',
     summary:
-      'Built Go Cloud Run jobs to ingest Cloudflare data into ClickHouse. Automated the Cloudflare onboarding flow, and stopped Supabase timeouts on several global views by replacing per-row subqueries with lateral joins and Postgres RPCs.',
+      'Built Go Cloud Run jobs to ingest Cloudflare data into ClickHouse. Automated the Cloudflare onboarding flow, and stopped Supabase timeouts on global views by replacing per-row subqueries with lateral joins and Postgres RPCs.',
   },
   {
     company: 'Shopify',
