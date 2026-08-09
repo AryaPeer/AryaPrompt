@@ -22,7 +22,7 @@ const sumfetch = async (args: string[]): Promise<string> => {
 
 `;
   } else {
-    return `
+    return `<span class="ascii">
            ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▄                  sumfetch
         ▄▓▓▀ ▄▓▓▀▓▓▓▀▓▓▄ ▀▀▓▓▄              -----------
       ▓▓▀  ▄▓▀   ▐▓▓  ▀▓▓    ▓▓▄             ABOUT
@@ -39,7 +39,7 @@ const sumfetch = async (args: string[]): Promise<string> => {
         ▀▓▓▄▄ ▀▓▓▄▓▓▄▓▓▓▄▄▓▓▀               
             ▀▓▓▓▓▓▓▓▓▓▓▓▀▀                  
 
-`;
+</span>`;
   }
 };
 

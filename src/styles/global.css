@@ -40,6 +40,13 @@ div#__next > div {
   max-width: 100%;
 }
 
+.ascii {
+  display: block;
+  white-space: pre;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
 .banner-art {
   display: block;
   white-space: pre;

@@ -10,7 +10,7 @@ export const History: React.FC<{ history: Array<HistoryInterface> }> = ({
       {history.map((entry: HistoryInterface, index: number) => (
         <div key={entry.command + index}>
           <div className="flex flex-row space-x-2">
-            <div className="flex-shrink">
+            <div className="flex-shrink-0">
               <Ps1 />
             </div>
 

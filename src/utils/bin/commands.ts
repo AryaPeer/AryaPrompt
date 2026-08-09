@@ -274,7 +274,7 @@ Connection to ${config.ps1_hostname} closed. You can close the browser now.`;
 };
 
 export const sl = async (args: string[]): Promise<string> => {
-  return `
+  return `<span class="ascii">
       ====        ________                ___________
   _D _|  |_______/        \\__I_I_____===__|_________|
    |(_)---  |   H\\________/ |   |        =|___ ___|
@@ -282,7 +282,7 @@ export const sl = async (args: string[]): Promise<string> => {
   |      |  |   H  |__--------------------| [___] |
   | ________|___H__/__|_____/[][]~\\_______|       |
   |/ |   |-----------I_____I [][] []  D   |=======|__
-`;
+</span>`;
 };
 
 // Banner

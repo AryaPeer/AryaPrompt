@@ -18,5 +18,5 @@ export const weather = async (args: string[]): Promise<string> => {
     return 'Usage: weather [city]. Example: weather casablanca';
   }
   const weather = await getWeather(city);
-  return weather;
+  return `<span class="ascii">${escapeHtml(String(weather))}</span>`;
 };
