@@ -47,28 +47,6 @@ div#__next > div {
   max-width: 100%;
 }
 
-.fetch {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 2rem;
-  white-space: normal;
-  max-width: 100%;
-}
-
-.fetch-art,
-.fetch-info {
-  display: block;
-  white-space: pre;
-  flex: 0 0 auto;
-}
-
-/* The art alone needs ~350px; below that drop it and keep the details. */
-@media (max-width: 380px) {
-  .fetch-art {
-    display: none;
-  }
-}
-
 .banner-art {
   display: block;
   white-space: pre;

@@ -1,7 +1,6 @@
 // List of commands that do not require API calls
 
 import config from '../../../config.json';
-import sumfetch from './sumfetch';
 import { quote, weather } from './api_commands';
 
 // Help
@@ -10,7 +9,6 @@ export const help = async (args: string[]): Promise<string> => {
 
 <span class="text-light-yellow dark:text-dark-yellow">UTILITY COMMANDS:</span>
 help       - Show this help message
-sumfetch   - Display profiles summary
 about      - Learn more about me
 echo       - Echo back your input
 date       - Display current date and time
@@ -52,10 +50,11 @@ export const repo = async (args: string[]): Promise<string> => {
 
 // About
 export const about = async (args: string[]): Promise<string> => {
-  return `Hi, I am ${config.name}.
-Welcome to my website!
-More about me:
-'sumfetch' - short summary.`;
+  return `Hi, I am ${config.name}. Welcome to my website!
+
+<u><a href="mailto:${config.email}" target="_blank" rel="noopener noreferrer">${config.email}</a></u>
+<u><a href="https://github.com/${config.social.github}" target="_blank" rel="noopener noreferrer">github.com/${config.social.github}</a></u>
+<u><a href="https://linkedin.com/in/${config.social.linkedin}" target="_blank" rel="noopener noreferrer">linkedin.com/in/${config.social.linkedin}</a></u>`;
 };
 
 // Contact
@@ -234,7 +233,6 @@ const directories: Record<string, (args: string[]) => Promise<string>> = {
   experience,
   projects,
   quote,
-  sumfetch,
   weather,
 };
 
@@ -302,7 +300,6 @@ d88P     888 888      "Y88888 "Y888888 888        888   T88b  "Y88888P"  888    
 </span><span class="banner-wordmark">AryaPROMPT</span>
 
 Type 'help' to see the list of available commands.
-Type 'sumfetch' to display summary.
 Type 'experience' to see where I've worked.
 Type 'projects' to see what I've built.
 `;
