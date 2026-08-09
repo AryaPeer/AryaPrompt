@@ -1,1 +1,2 @@
-My Portfolio Website Based On Cveinnt's Live Terminal.
+My Personal Website Based On Cveinnt's Live Terminal.
+
